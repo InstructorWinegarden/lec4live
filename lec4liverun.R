@@ -1,9 +1,11 @@
 #lecture 4 live demo code for those who want to copy/reference
+library(styler)
+library(lintr)
 
 min(1, 4, 0)
 
 add_numbers <- function(a, b) {
-  answer = a + b
+  answer <- a + b
   return(answer)
 }
 
@@ -43,8 +45,8 @@ noquote(text2)
 #input: some text: statement
 #output: "statement," the instructor said incorrectly.
 contradict <- function(statement) {
-  contradiction <- paste0("\"", 
-                          statement, 
+  contradiction <- paste0("\"",
+                          statement,
                           "\" the instructor said incorrectly"
                           )
   return(contradiction)
@@ -130,4 +132,32 @@ quadratic_formula <- function(a, b, c) {
 
 quadratic_formula(1, 4, 2)
 
+AlTeRnAtEcApScAsE <- "some text idk"
+
+this_is_pref <- "some better text idk"
+
+
+#LINTING making sure the computer will understand your code
+
+#STYLE making sure a human will understand your code
+
+#I INSTALL PACKAGES IN THE CONSOLE (R STUDIO)
+#type this into console. QUOTES ARE IMPORTANT
+#install.packages("lintr")
+#install.packages("styler")
+#THEN I GO PUT library(lintr)
+#library(styler)
+#AT TOP OF FILE THEN RUN EACH OF THOSE LINES
+#then! go to session -> set working directory
+#style_file("lec4dryrunv1.R")
+#lint("lec4dryrunv1.R")
+
+#show and fail how it doesn't know fn lint is there if no library
+#show and fail how doesn't know where file is, then set directory
+
+lint("lec4liverun.R")
+
+style_file("lec4liverun.R")
+
+style_file("lec4dryrunv1.R")
 
