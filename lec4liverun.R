@@ -25,3 +25,34 @@ circumference_from_diameter <- function(diameter) {
 circumference_from_diameter(8)
 
 my_circumference <- circumference_from_diameter(8)
+
+
+text <- "a piece of text"
+text2 <- "a piece of \"text\" with quotes around it"
+
+paste("a", "set", "of", "words")
+?paste()
+paste0("a", "set", "of", "words")
+
+print(text2)
+typeof(text2)
+?typeof
+noquote(text2)
+
+#function contradict
+#input: some text: statement
+#output: "statement," the instructor said incorrectly.
+contradict <- function(statement) {
+  contradiction <- paste0("\"", 
+                          statement, 
+                          "\" the instructor said incorrectly"
+                          )
+  return(contradiction)
+}
+
+noquote(contradict("I'm cool"))
+my_contradiction1 <- contradict("I'm cool")
+
+my_contradiction2 <- contradict("I'm not so bad instructing")
+print(my_contradiction2)
+
